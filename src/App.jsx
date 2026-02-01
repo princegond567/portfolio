@@ -10,23 +10,31 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 // import ParticlesBackground from './components/ParticlesBackground'
 import CustomCursor from './components/CustomCursor'
+import { useState } from 'react'
+import IntroAnimation from './components/IntroAnimation'
 
 function App() {
+  const [introDone, setIntroDone] = useState(false);
 
   return (
-    <div className='relative gradient text-white'>
-      <CustomCursor/>
-      {/* <ParticlesBackground/> */}
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Project/>
-      <Experience/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <>
+      {!introDone && <IntroAnimation onFinish = {() => setIntroDone(true)} />}
+      {introDone && (
+        <div className='relative gradient text-white'>
+          <CustomCursor/>
+          {/* <ParticlesBackground/> */}
+          <Navbar/>
+          <Home/>
+          <About/>
+          <Skills/>
+          <Project/>
+          <Experience/>
+          <Testimonials/>
+          <Contact/>
+          <Footer/>
+        </div>
+      )}
+    </>
   )
 }
 
