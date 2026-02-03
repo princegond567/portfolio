@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './sections/Home'
 import About from './sections/About'
 import Skills from './sections/Skills'
-import Project from './sections/Project'
+import Projects from './sections/Projects'
 import Experience from './sections/Experience'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
@@ -12,6 +12,7 @@ import Footer from './sections/Footer'
 import CustomCursor from './components/CustomCursor'
 import { useState } from 'react'
 import IntroAnimation from './components/IntroAnimation'
+
 
 function App() {
   const [introDone, setIntroDone] = useState(false);
@@ -27,7 +28,7 @@ function App() {
           <Home/>
           <About/>
           <Skills/>
-          <Project/>
+          <Projects/>
           <Experience/>
           <Testimonials/>
           <Contact/>
